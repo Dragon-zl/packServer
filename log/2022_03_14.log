@@ -1,0 +1,9 @@
+2022-03-14 16:35:26.343021 [info] : ========== Server init ==========
+2022-03-14 16:35:26.343080 [info] : Port:1316, OpenLinger: false
+2022-03-14 16:35:26.343088 [info] : Listen Mode: ET, OpenConn Mode: ET
+2022-03-14 16:35:26.343092 [info] : LogSys level: 1
+2022-03-14 16:35:26.343095 [info] : srcDir: /home/dzl/pack/packServer/resources/
+2022-03-14 16:35:26.343099 [info] : SqlConnPool num: 12, ThreadPool num: 6
+2022-03-14 16:35:26.343103 [info] : ========== Server start ==========
+2022-03-14 16:38:06.279298 [info] : Client[7](192.168.146.1:8189) in, userCount:1
+2022-03-14 16:38:06.279734 [info] : Client[7] in!

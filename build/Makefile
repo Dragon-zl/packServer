@@ -4,7 +4,9 @@ CFLAGS = -std=c++14 -O2 -Wall -g
 TARGET = server
 OBJS = ../code/log/*.cpp ../code/pool/*.cpp ../code/timer/*.cpp \
        ../code/client/*.cpp ../code/server/*.cpp \
+	   ../code/GET_POST/*.cpp \
        ../code/buffer/*.cpp ../code/main.cpp
+
 
 all: $(OBJS)
 	$(CXX) $(CFLAGS) $(OBJS) -o ../bin/$(TARGET)  -pthread -L /usr/lib64/mysql/ -lmysqlclient

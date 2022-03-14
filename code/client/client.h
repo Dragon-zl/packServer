@@ -4,12 +4,14 @@
 #include "../log/log.h"
 #include "../pool/sqlconnRAII.h"
 #include "../buffer/buffer.h"
+#include "../GET_POST/getpost.h"
 
 #include <sys/types.h>
 #include <sys/uio.h>     // readv/writev
 #include <arpa/inet.h>   // sockaddr_in
 #include <stdlib.h>      // atoi()
 #include <errno.h>   
+#include <regex>
 class Client{
 public:
     Client();
@@ -34,7 +36,6 @@ public:
     static const char* srcDir;
     static std::atomic<int> userCount;
 private:
-
     /*客户端的文件描述符*/
     int fd_;
     /*客户端的IP地址信息*/

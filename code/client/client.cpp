@@ -24,11 +24,19 @@ int Client::GetPort() const {
 const char* Client::GetIP() const {
     return inet_ntoa(addr_.sin_addr);
 }
+
 /*客户端读事件，读取数据后，的逻辑处理函数*/
 bool Client::process() {
     std::string clientdate = readBuff_.RetrieveAllToStr();
 
-    std::cout << clientdate << std::endl;
+    regex patten("^([^ ]*);([ ]*)$");
+    smatch subMatch;
+    if(regex_match(clientdate, subMatch, patten)) {   
+        
+        std::cout << subMatch[1] << std::endl;
+        std::cout << subMatch[2] << std::endl;
+        return true;
+    }
 
     LOG_DEBUG("filesize:%d, %d  to %d" , iovCnt_, ToWriteBytes());
     return false;//返回 FALSE 重新注册读事件
